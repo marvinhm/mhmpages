@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { SelectComponent } from "./components/SelectComponent";
 import './App.css';
 
+
 function App() {
+
+  const appStyle = {
+    background: 'hsl(212deg, 50%, 40%)',
+    height: '100vh',
+    width: '100vw'
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={appStyle}>
+    <SelectComponent placeholder="Favourite OS">
+      <option>Windows</option>
+      <option>Linux</option>
+      <option>Apple</option>
+    </SelectComponent>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
